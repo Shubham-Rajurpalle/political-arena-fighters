@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +11,19 @@
       padding: 0;
       box-sizing: border-box;
     }
-    
-    body { 
-      margin: 0; 
-      padding: 0; 
+
+    body {
+      margin: 0;
+      padding: 0;
       background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 50%, #0a0a0a 100%);
-      display: flex; 
-      justify-content: center; 
-      align-items: center; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
       min-height: 100vh;
       font-family: 'Courier New', monospace;
       overflow: hidden;
     }
-    
+
     body::before {
       content: '';
       position: fixed;
@@ -30,30 +31,22 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: 
-        repeating-linear-gradient(
-          0deg,
+      background:
+        repeating-linear-gradient(0deg,
           transparent,
           transparent 2px,
           rgba(0, 255, 255, 0.03) 2px,
-          rgba(0, 255, 255, 0.03) 4px
-        );
+          rgba(0, 255, 255, 0.03) 4px);
       pointer-events: none;
       z-index: 1;
     }
-    
-    #game-container { 
-      position: relative;
-      border: 4px solid #00ffff; 
-      box-shadow: 
-        0 0 20px rgba(0, 255, 255, 0.5),
-        0 0 40px rgba(0, 255, 255, 0.3),
-        inset 0 0 20px rgba(0, 255, 255, 0.1);
-      border-radius: 8px;
-      overflow: hidden;
-      z-index: 2;
+
+    #game-container {
+      transform: scale(0.85);
+      transform-origin: center;
     }
-    
+
+
     #game-container::before {
       content: '';
       position: absolute;
@@ -97,9 +90,101 @@
       transition: width 0.3s ease;
       box-shadow: 0 0 10px #00ffff;
     }
+
+    /* AD SPACES */
+    .ad-space {
+      background: #1a1a2e;
+      border: 2px solid #00ffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #00ffff;
+      font-size: 14px;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+      z-index: 10;
+    }
+
+    #ad-top {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 728px;
+      height: 90px;
+    }
+
+    #ad-left {
+      position: fixed;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 160px;
+      height: 600px;
+    }
+
+    #ad-right {
+      position: fixed;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 160px;
+      height: 600px;
+    }
+
+    #ad-bottom {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 728px;
+      height: 90px;
+    }
+
+    /* Responsive - hide ads on small screens */
+    @media (max-width: 1400px) {
+
+      #ad-left,
+      #ad-right {
+        display: none;
+      }
+    }
+
+    @media (max-width: 800px) {
+
+      #ad-top,
+      #ad-bottom {
+        width: 320px;
+        height: 50px;
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
+
 <body>
+  <!-- AD SPACES -->
+  <div id="ad-top" class="ad-space">
+    <!-- PLACE YOUR AD CODE HERE (728x90) -->
+    <div>AD SPACE - 728x90</div>
+  </div>
+
+  <div id="ad-left" class="ad-space">
+    <!-- PLACE YOUR AD CODE HERE (160x600) -->
+    <div style="writing-mode: vertical-rl;">AD 160x600</div>
+  </div>
+
+  <div id="ad-right" class="ad-space">
+    <!-- PLACE YOUR AD CODE HERE (160x600) -->
+    <div style="writing-mode: vertical-rl;">AD 160x600</div>
+  </div>
+
+  <div id="ad-bottom" class="ad-space">
+    <!-- PLACE YOUR AD CODE HERE (728x90) -->
+    <div>AD SPACE - 728x90</div>
+  </div>
+
+  <!-- LOADING SCREEN -->
   <div id="loading">
     <div>POLITICAL ARENA FIGHTERS</div>
     <div class="loading-bar">
@@ -107,7 +192,11 @@
     </div>
     <div style="font-size: 16px; margin-top: 10px;">LOADING...</div>
   </div>
+
+  <!-- GAME CONTAINER -->
   <div id="game-container"></div>
+
   <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>

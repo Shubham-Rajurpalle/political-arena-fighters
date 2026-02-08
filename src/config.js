@@ -12,7 +12,7 @@ export const GAME_CONFIG = {
     }
   },
   scale: {
-    mode: Phaser.Scale.FIT,
+    mode: Phaser.Scale.NONE,
     autoCenter: Phaser.Scale.CENTER_BOTH
   },
   render: {
