@@ -1,0 +1,83 @@
+{
+  "characters": [
+    {
+      "id": "modi",
+      "name": "Narendra Modi",
+      "title": "The Strategist",
+      "archetype": "balanced",
+      "color": "#FF9933",
+      "secondaryColor": "#138808",
+      "stats": {
+        "health": 110,
+        "speed": 6,
+        "attack": 8,
+        "defense": 7,
+        "jumpHeight": 5,
+        "weight": 6
+      },
+      "specialMove": {
+        "name": "56 Inch Speech",
+        "type": "radial",
+        "damage": 22,
+        "radius": 170,
+        "cooldown": 7000,
+        "description": "Powerful oratory creates shockwave"
+      },
+      "ultimate": {
+        "name": "Vikas Rally",
+        "type": "buff",
+        "duration": 12000,
+        "attackBoost": 1.6,
+        "speedBoost": 1.4,
+        "defenseBoost": 0.4,
+        "description": "Rally the nation for massive power boost"
+      },
+      "quotes": {
+        "intro": ["Bharat Mata Ki Jai!", "Development is my mission!"],
+        "victory": ["Victory for New India!", "This is people's mandate!"],
+        "defeat": ["We will come back stronger!", "The fight continues!"],
+        "special": ["Feel the power of 56 inches!", "Sabka Saath, Sabka Vikas!"],
+        "ultimate": ["Witness the power of 140 crore Indians!"]
+      }
+    },
+    {
+      "id": "rahul",
+      "name": "Rahul Gandhi",
+      "title": "The Youth Leader",
+      "archetype": "speed",
+      "color": "#138808",
+      "secondaryColor": "#0066FF",
+      "stats": {
+        "health": 90,
+        "speed": 9,
+        "attack": 7,
+        "defense": 5,
+        "jumpHeight": 8,
+        "weight": 4
+      },
+      "specialMove": {
+        "name": "Youth Power Rush",
+        "type": "multi_hit",
+        "damage": 4,
+        "hits": 9,
+        "cooldown": 5500,
+        "description": "Energetic combo of rapid strikes"
+      },
+      "ultimate": {
+        "name": "Nyay Storm",
+        "type": "projectile_rain",
+        "damage": 6,
+        "projectiles": 25,
+        "duration": 3500,
+        "description": "Justice rains from above"
+      },
+      "quotes": {
+        "intro": ["Time for change!", "Youth will lead India!"],
+        "victory": ["Justice prevails!", "This is for the people!"],
+        "defeat": ["We learn and grow!", "The struggle continues!"],
+        "special": ["Feel the youth power!", "Congress ka haath!"],
+        "ultimate": ["Nyay for all!"]
+      }
+    }
+  ]
+}

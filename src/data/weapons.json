@@ -1,0 +1,93 @@
+{
+  "weapons": [
+    {
+      "id": "mic_blaster",
+      "name": "Microphone Blaster",
+      "category": "gun",
+      "description": "Words become weapons",
+      "stats": {
+        "damage": 10,
+        "fireRate": 250,
+        "range": 450,
+        "projectileSpeed": 650,
+        "ammo": 25,
+        "reloadTime": 1200
+      },
+      "projectile": {
+        "color": "0xFF9933",
+        "size": 15,
+        "trail": true,
+        "glowColor": "0xFFCC66",
+        "shape": "soundwave"
+      }
+    },
+    {
+      "id": "social_missile",
+      "name": "Social Media Missile",
+      "category": "missile",
+      "description": "Viral attack that tracks targets",
+      "stats": {
+        "damage": 38,
+        "fireRate": 2000,
+        "range": 650,
+        "projectileSpeed": 350,
+        "ammo": 6,
+        "reloadTime": 2500,
+        "tracking": true,
+        "explosionRadius": 120,
+        "explosionDamage": 25
+      },
+      "projectile": {
+        "color": "0x0066FF",
+        "size": 20,
+        "trail": true,
+        "glowColor": "0x00AAFF",
+        "particleEffect": "likes"
+      }
+    },
+    {
+      "id": "news_rapid_fire",
+      "name": "News Flash Gun",
+      "category": "gun",
+      "description": "Breaking news at rapid speed",
+      "stats": {
+        "damage": 5,
+        "fireRate": 80,
+        "range": 400,
+        "projectileSpeed": 750,
+        "ammo": 60,
+        "reloadTime": 1800
+      },
+      "projectile": {
+        "color": "0xFFFF00",
+        "size": 8,
+        "trail": true,
+        "glowColor": "0xFFFF66",
+        "particleEffect": "headlines"
+      }
+    },
+    {
+      "id": "policy_bomb",
+      "name": "Policy Bomb",
+      "category": "missile",
+      "description": "Game-changing explosive policy",
+      "stats": {
+        "damage": 50,
+        "fireRate": 3500,
+        "range": 500,
+        "projectileSpeed": 250,
+        "ammo": 4,
+        "reloadTime": 3000,
+        "explosionRadius": 150,
+        "explosionDamage": 35
+      },
+      "projectile": {
+        "color": "0xFF0000",
+        "size": 25,
+        "trail": true,
+        "glowColor": "0xFF6666",
+        "particleEffect": "documents"
+      }
+    }
+  ]
+}
