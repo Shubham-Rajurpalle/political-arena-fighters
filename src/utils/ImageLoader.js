@@ -25,7 +25,7 @@ export function loadCharacterAssets(scene) {
   // Load character portraits
   Object.keys(CHARACTER_IMAGES).forEach(charId => {
     const images = CHARACTER_IMAGES[charId];
-    
+
     // Try to load, but don't fail if image doesn't exist
     try {
       if (images.portrait) {
@@ -41,7 +41,7 @@ export function loadCharacterAssets(scene) {
       console.log(`Optional image not loaded for ${charId}`);
     }
   });
-  
+
   // Load stage backgrounds
   Object.keys(STAGE_BACKGROUNDS).forEach(stageId => {
     try {
