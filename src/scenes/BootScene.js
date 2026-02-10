@@ -1,3 +1,5 @@
+import { loadCharacterAssets } from '../utils/ImageLoader.js';
+
 export default class BootScene extends Phaser.Scene {
   constructor() {
     super({ key: 'BootScene' });
@@ -25,6 +27,9 @@ export default class BootScene extends Phaser.Scene {
     // Load data files
     this.load.json('characters', '/data/characters.json');
     this.load.json('weapons', '/data/weapons.json');
+
+    // Load character assets
+    loadCharacterAssets(this);
   }
 
   create() {

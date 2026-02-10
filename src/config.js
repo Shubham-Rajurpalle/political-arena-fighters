@@ -40,13 +40,13 @@ export const CONSTANTS = {
   HEAVY_KNOCKBACK_X: 100,
   HEAVY_KNOCKBACK_Y: -40,
 
-  // Frame data (at 60fps)
+  // Frame data (at 60fps) - Increased cooldown to ~2 seconds for better pacing
   LIGHT_STARTUP: 50,
   LIGHT_ACTIVE: 83,
-  LIGHT_RECOVERY: 133,
+  LIGHT_RECOVERY: 253,
   HEAVY_STARTUP: 200,
   HEAVY_ACTIVE: 133,
-  HEAVY_RECOVERY: 333,
+  HEAVY_RECOVERY: 453,
 
   // Game - EXTENDED BATTLE TIME
   BATTLE_TIME: 180,  // 3 minutes for longer fights!

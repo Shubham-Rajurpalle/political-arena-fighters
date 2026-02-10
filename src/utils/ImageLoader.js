@@ -4,13 +4,13 @@
 export const CHARACTER_IMAGES = {
   modi: {
     portrait: 'assets/images/characters/modi-portrait.png',
-    background: 'assets/images/characters/modi-bg.jpg',
-    sprite: 'assets/images/characters/modi-sprite.png'
+    // background: 'assets/images/characters/modi-bg.jpg',
+    // sprite: 'assets/images/characters/modi-sprite.png'
   },
   rahul: {
     portrait: 'assets/images/characters/rahul-portrait.png',
-    background: 'assets/images/characters/rahul-bg.jpg',
-    sprite: 'assets/images/characters/rahul-sprite.png'
+    // background: 'assets/images/characters/rahul-bg.jpg',
+    // sprite: 'assets/images/characters/rahul-sprite.png'
   }
 };
 

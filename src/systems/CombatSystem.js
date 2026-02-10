@@ -20,7 +20,7 @@ export default class CombatSystem {
         }
       });
     }
-    
+
     // Check fighter2 hitting fighter1
     const hits2 = fighter2.hitbox.checkCollision(fighter1.hitbox);
     if (hits2.length > 0) {
@@ -42,37 +42,37 @@ export default class CombatSystem {
       fighter1.x, fighter1.y,
       fighter2.x, fighter2.y
     );
-    
+
     if (distance <= specialData.radius) {
       fighter2.takeDamage(specialData.damage);
-      
+
       if (specialData.type === 'ground_pound' && specialData.stun) {
         fighter2.stun(specialData.stun);
       }
-      
+
       this.onHitLanded(fighter1, fighter2, specialData.damage, 0);
       return true;
     }
-    
+
     return false;
   }
 
   onHitLanded(attacker, defender, damage, combo) {
-    // Screen shake
-    const intensity = Math.min(damage / 100, 0.02);
-    this.scene.cameras.main.shake(100, intensity);
-    
+    // Screen shake disabled for better UX
+    // const intensity = Math.min(damage / 100, 0.02);
+    // this.scene.cameras.main.shake(100, intensity);
+
     // Damage number
     this.showDamageNumber(defender.x, defender.y - 50, damage, combo >= 3);
-    
+
     // Hit spark
     this.createHitSpark(defender.x, defender.y);
-    
+
     // Combo display
     if (combo >= 3) {
       this.showComboText(combo);
     }
-    
+
     // Ultimate meter for attacker
     attacker.ultimate.gainMeter(damage);
   }
@@ -85,7 +85,7 @@ export default class CombatSystem {
   showDamageNumber(x, y, damage, isCritical) {
     const color = isCritical ? '#ff0000' : '#ffffff';
     const size = isCritical ? '32px' : '24px';
-    
+
     const text = this.scene.add.text(x, y, Math.floor(damage), {
       fontSize: size,
       color: color,
@@ -94,7 +94,7 @@ export default class CombatSystem {
       stroke: '#000000',
       strokeThickness: 3
     }).setOrigin(0.5);
-    
+
     this.scene.tweens.add({
       targets: text,
       y: y - 50,
@@ -109,7 +109,7 @@ export default class CombatSystem {
     for (let i = 0; i < 8; i++) {
       const angle = (Math.PI * 2 * i) / 8;
       const spark = this.scene.add.rectangle(x, y, 4, 4, COLORS.PRIMARY);
-      
+
       this.scene.tweens.add({
         targets: spark,
         x: x + Math.cos(angle) * 30,
@@ -128,7 +128,7 @@ export default class CombatSystem {
         y - 20 - Math.random() * 20,
         3, 3, 0x4444ff
       );
-      
+
       this.scene.tweens.add({
         targets: spark,
         y: y + 20,

@@ -8,7 +8,7 @@
       "color": "#FF9933",
       "secondaryColor": "#138808",
       "stats": {
-        "health": 110,
+        "health": 300,
         "speed": 6,
         "attack": 8,
         "defense": 7,
@@ -30,14 +30,29 @@
         "attackBoost": 1.6,
         "speedBoost": 1.4,
         "defenseBoost": 0.4,
-        "description": "Rally the nation for massive power boost"
+        "healAmount": 50,
+        "description": "Rally the nation for massive power boost and heal"
       },
       "quotes": {
-        "intro": ["Bharat Mata Ki Jai!", "Development is my mission!"],
-        "victory": ["Victory for New India!", "This is people's mandate!"],
-        "defeat": ["We will come back stronger!", "The fight continues!"],
-        "special": ["Feel the power of 56 inches!", "Sabka Saath, Sabka Vikas!"],
-        "ultimate": ["Witness the power of 140 crore Indians!"]
+        "intro": [
+          "Bharat Mata Ki Jai!",
+          "Development is my mission!"
+        ],
+        "victory": [
+          "Victory for New India!",
+          "This is people's mandate!"
+        ],
+        "defeat": [
+          "We will come back stronger!",
+          "The fight continues!"
+        ],
+        "special": [
+          "Feel the power of 56 inches!",
+          "Sabka Saath, Sabka Vikas!"
+        ],
+        "ultimate": [
+          "Witness the power of 140 crore Indians!"
+        ]
       }
     },
     {
@@ -48,7 +63,7 @@
       "color": "#138808",
       "secondaryColor": "#0066FF",
       "stats": {
-        "health": 90,
+        "health": 200,
         "speed": 9,
         "attack": 7,
         "defense": 5,
@@ -69,14 +84,29 @@
         "damage": 6,
         "projectiles": 25,
         "duration": 3500,
-        "description": "Justice rains from above"
+        "healAmount": 40,
+        "description": "Justice rains from above and restores health"
       },
       "quotes": {
-        "intro": ["Time for change!", "Youth will lead India!"],
-        "victory": ["Justice prevails!", "This is for the people!"],
-        "defeat": ["We learn and grow!", "The struggle continues!"],
-        "special": ["Feel the youth power!", "Congress ka haath!"],
-        "ultimate": ["Nyay for all!"]
+        "intro": [
+          "Time for change!",
+          "Youth will lead India!"
+        ],
+        "victory": [
+          "Justice prevails!",
+          "This is for the people!"
+        ],
+        "defeat": [
+          "We learn and grow!",
+          "The struggle continues!"
+        ],
+        "special": [
+          "Feel the youth power!",
+          "Congress ka haath!"
+        ],
+        "ultimate": [
+          "Nyay for all!"
+        ]
       }
     }
   ]

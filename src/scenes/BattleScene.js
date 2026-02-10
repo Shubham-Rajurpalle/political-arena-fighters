@@ -32,7 +32,7 @@ export default class BattleScene extends Phaser.Scene {
     this.player = new PlayerController(
       this,
       CONSTANTS.LEFT_BOUND + 100,
-      CONSTANTS.GROUND_Y - 60,  // ← Same value
+      CONSTANTS.GROUND_Y - 150,  // Moved higher to avoid dark area
       playerChar,
       playerWeapon
     );
@@ -40,7 +40,7 @@ export default class BattleScene extends Phaser.Scene {
     this.enemy = new AIController(
       this,
       CONSTANTS.RIGHT_BOUND - 100,
-      CONSTANTS.GROUND_Y - 60,  // ← Same value
+      CONSTANTS.GROUND_Y - 150,  // Moved higher to avoid dark area
       aiChar,
       aiWeapon
     );
@@ -126,10 +126,10 @@ export default class BattleScene extends Phaser.Scene {
     // Crowd silhouettes
     this.createCrowdEffect();
 
-    // Arena floor
+    // Arena floor - extend to fill bottom
     const floor = this.add.graphics();
-    floor.fillStyle(0x2a2a3e, 1);
-    floor.fillRect(0, CONSTANTS.GROUND_Y, width, height - CONSTANTS.GROUND_Y);
+    floor.fillStyle(0x1a1a2e, 1);
+    floor.fillRect(0, CONSTANTS.GROUND_Y2 + 200, width, height - CONSTANTS.GROUND_Y);
 
     // Floor pattern (hexagon/stage pattern)
     floor.lineStyle(2, 0x4a4a6e, 0.5);
